@@ -25,3 +25,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 } else {
     echo "<p style='color:red;'>Invalid request method.</p>";
 }
+
