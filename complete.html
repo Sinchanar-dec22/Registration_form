@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Complete</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Complete</h1>
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Phone:</strong> <span id="phone"></span></p>
+        <p><strong>Address:</strong> <span id="address"></span></p>
+        <button onclick="window.location.href='index.html'">Back to Registration</button>
+    </div>
+</body>
+<script>
+    // Retrieve form data from the query string
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('name').textContent = params.get('name');
+    document.getElementById('email').textContent = params.get('email');
+    document.getElementById('phone').textContent = params.get('phone');
+    document.getElementById('address').textContent = params.get('address');
+</script>
+</html>
